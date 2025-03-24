@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Design Preferences</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Tell Us How You Want Your Website to Look!</h1>
+    <form id="designForm">
+      <!-- Target Audience -->
+      <section>
+        <h2>1. Target Audience</h2>
+        <label for="audienceAge">Who is your primary audience? (e.g., age group, profession, interests)</label>
+        <input type="text" id="audienceAge" name="audienceAge" placeholder="e.g., 25-40, professionals, tech enthusiasts">
+        
+        <label for="audienceGoal">What is the main goal for your audience on this site? (e.g., information, purchase, entertainment)</label>
+        <input type="text" id="audienceGoal" name="audienceGoal" placeholder="e.g., purchase products, learn about services">
+      </section>
+
+      <!-- Branding -->
+      <section>
+        <h2>2. Branding</h2>
+        <label for="logoUpload">Do you have a logo you'd like us to use? (Upload option for logos)</label>
+        <input type="file" id="logoUpload" name="logoUpload" accept="image/*">
+        
+        <label for="brandingGuidelines">Do you have specific branding guidelines or a style guide we should follow?</label>
+        <textarea id="brandingGuidelines" name="brandingGuidelines" rows="3" placeholder="e.g., Use brand colors #FF0000 and #0000FF"></textarea>
+        
+        <label for="brandPersonality">How would you describe the personality of your brand? (e.g., professional, playful, luxurious)</label>
+        <input type="text" id="brandPersonality" name="brandPersonality" placeholder="e.g., professional and modern">
+      </section>
+
+      <!-- Content Preferences -->
+      <section>
+        <h2>3. Content Preferences</h2>
+        <label for="contentHelp">Do you need help creating website content, or do you already have it? (e.g., text, images, videos)</label>
+        <select id="contentHelp" name="contentHelp">
+          <option value="needHelp">We need help creating content</option>
+          <option value="haveContent">We already have content</option>
+        </select>
+        
+        <label for="pageTypes">What type of pages do you want on your website? (e.g., Homepage, About Us, Contact, Portfolio)</label>
+        <input type="text" id="pageTypes" name="pageTypes" placeholder="e.g., Homepage, About Us, Blog">
+        
+        <label for="ctaPreferences">Do you have preferred call-to-actions? (e.g., "Sign Up," "Learn More," "Buy Now")</label>
+        <input type="text" id="ctaPreferences" name="ctaPreferences" placeholder="e.g., 'Sign Up,' 'Contact Us'">
+      </section>
+
+      <!-- SEO Requirements -->
+      <section>
+        <h2>4. SEO Requirements</h2>
+        <label for="seoKeywords">What keywords or phrases should we focus on for SEO?</label>
+        <textarea id="seoKeywords" name="seoKeywords" rows="3" placeholder="e.g., web design, digital marketing"></textarea>
+        
+        <label for="metaPreferences">Do you have a preference for meta descriptions and titles?</label>
+        <textarea id="metaPreferences" name="metaPreferences" rows="3" placeholder="e.g., 'Best Web Design Services in Town'"></textarea>
+        
+        <label for="analyticsIntegration">Would you like us to integrate analytics or tracking tools for insights?</label>
+        <select id="analyticsIntegration" name="analyticsIntegration">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </section>
+
+      <!-- Functionalities -->
+      <section>
+        <h2>5. Functionalities</h2>
+        <label for="features">Which features do you want included? (e.g., contact forms, search bars, booking systems, e-commerce)</label>
+        <textarea id="features" name="features" rows="3" placeholder="e.g., contact form, e-commerce functionality"></textarea>
+        
+        <label for="integrations">Would you like any integrations? (e.g., social media feeds, live chat, payment gateways)</label>
+        <textarea id="integrations" name="integrations" rows="3" placeholder="e.g., Instagram feed, PayPal integration"></textarea>
+        
+        <label for="interactivity">What level of user interactivity do you want? (e.g., quizzes, surveys, forums)</label>
+        <input type="text" id="interactivity" name="interactivity" placeholder="e.g., interactive quizzes, user forums">
+      </section>
+
+      <!-- Visual Style -->
+      <section>
+        <h2>6. Visual Style</h2>
+        <label for="inspirationSites">Do you have any example websites that inspire you?</label>
+        <textarea id="inspirationSites" name="inspirationSites" rows="3" placeholder="e.g., https://example.com"></textarea>
+        
+        <label for="visualStyle">How would you describe your ideal visual style? (e.g., minimalist, colorful, corporate)</label>
+        <input type="text" id="visualStyle" name="visualStyle" placeholder="e.g., minimalist and modern">
+        
+        <label for="animations">Are there any specific animations or transitions you like?</label>
+        <input type="text" id="animations" name="animations" placeholder="e.g., smooth scrolling, fade-in effects">
+      </section>
+
+      <!-- Maintenance & Updates -->
+      <section>
+        <h2>7. Maintenance & Updates</h2>
+        <label for="maintenanceManager">Who will manage the website post-launch? (e.g., yourself, your team, us)</label>
+        <input type="text" id="maintenanceManager" name="maintenanceManager" placeholder="e.g., our internal team">
+        
+        <label for="updateFrequency">How often do you plan to update the website content?</label>
+        <input type="text" id="updateFrequency" name="updateFrequency" placeholder="e.g., weekly, monthly">
+        
+        <label for="trainingNeeds">Do you need training or documentation for website management?</label>
+        <select id="trainingNeeds" name="trainingNeeds">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </section>
+
+      <!-- Timeline & Budget -->
+      <section>
+        <h2>8. Timeline & Budget</h2>
+        <label for="timeline">What is your timeline for project completion?</label>
+        <input type="text" id="timeline" name="timeline" placeholder="e.g., 3 months">
+        
+        <label for="budget">What is your budget for this project?</label>
+        <input type="text" id="budget" name="budget" placeholder="e.g., Ksh.50,000">
+      </section>
+
+      <!-- Submit Button -->
+      <button type="submit">Submit Preferences</button>
+    </form>
+
+    <!-- Confirmation Message -->
+    <div id="confirmationMessage" class="hidden">
+      <p>Thank you for submitting your preferences! We'll get started on your website design.</p>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
